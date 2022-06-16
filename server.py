@@ -11,7 +11,7 @@ while True:
     clientSocket, address = s.accept()
     print('Connected to', address)
 
-    d = {1: "Hello", 2: "World"}
+    d = {1: "Hello", 2: "World", 3: "!"}
     msg = pickle.dumps(d)
 
     msg = bytes(f"{len(msg):<{HEADER_SIZE}}", "utf-8") + msg
