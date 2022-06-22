@@ -1,10 +1,9 @@
 import socket
 import pickle
-import sys
 
 HEADER_SIZE = 10
 PORT_NUMBER = 9999
-SERVER_IP = '10.34.90.220'
+SERVER_IP = '10.244.37.20' # Replace with server IP address.
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((SERVER_IP, PORT_NUMBER))

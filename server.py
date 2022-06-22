@@ -1,11 +1,10 @@
 import socket
 import pickle
-import sys
 
 HEADER_SIZE = 10
 PORT_NUMBER = 9999
 
-host_name = socket.gethostbyname('0.0.0.0')
+host_name = socket.gethostbyname(socket.gethostname())
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host_name, PORT_NUMBER))
