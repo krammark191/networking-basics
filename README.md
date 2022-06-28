@@ -2,11 +2,9 @@
 
 This networking program has a server and a client. The server, when prompted by a client, will return a python object. Multiple clients could be set up, the server, when asked, will always return the same thing. Code could be modified to create a menu system in the client that then asks the server for a specific response.
 
-My purpose for writing this software was to learn the basics of networking. Now that I know how to have a client talk to a server, I can expand my programs to create a file system or a client-to-client chat system throught the server.
+My purpose for writing this software was to learn the basics of networking. Now that I know how to have a client talk to a server, I can expand my programs to create a file system or a client-to-client chat system through the server.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (you will need to show two pieces of software running and communicating with each other) and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/wpmBe6jMMe4)
 
 # Network Communication
 
