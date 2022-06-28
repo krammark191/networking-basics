@@ -2,13 +2,15 @@ import socket
 import pickle
 
 # Set constant values.
-HEADER_SIZE = 10
-PORT_NUMBER = 9999
+HEADER_SIZE = 10    # Size of the header.
+PORT_NUMBER = 9999  # Port number of the server.
 SERVER_IP = '10.36.37.83' # Replace with server IP address.
 
 # Open a socket and connect to the server.
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((socket.gethostname(), PORT_NUMBER))
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # Create a socket object.
+
+# The first parameter should be SERVER_IP for network connection, or socket.gethostname() for local connection.
+s.connect((socket.gethostname(), PORT_NUMBER))          # Connect to the server.
 
 
 while True:
@@ -27,8 +29,8 @@ while True:
         if new_msg:
 
             # Display the header and the message size.
-            print(f"new message length: {msg[:HEADER_SIZE]}")
-            msg_length = int(msg[:HEADER_SIZE])
+            print(f"new message length: {msg[:HEADER_SIZE]}")   # Display the header.
+            msg_length = int(msg[:HEADER_SIZE])                 # Convert the header to an integer.
 
             # Set new_msg to False as it is no longer the first buffer of the message.
             new_msg = False
@@ -50,5 +52,5 @@ while True:
             print(d)
 
             # Sets variables back to their default states and awaits the next message.
-            new_msg = True
-            full_msg = b''
+            new_msg = True  # Set new_msg to True as it is now the first buffer of the next message.
+            full_msg = b''  # Reset full_msg to empty.
